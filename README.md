@@ -5,13 +5,13 @@ This is an easy key/value store server.
 
 1. Start Server
     ```bash
-    python kvserver.py
+    $ python kvserver.py
     2016-03-30 15:46:29 Starting kvserver now....
     ```
 
 2. Connect Server
     ```bash
-    python kvclient.py
+    $ python kvclient.py
     localhost:6375> 
     localhost:6375> help
     help                - print help_doc .
@@ -19,5 +19,12 @@ This is an easy key/value store server.
     get <key>           - get the vaule of <key> .
     flushall            - clean the store data . 
     exit                - exit connection .
-    localhost:6375> exit
+    localhost:6375> set foo bar
+    OK
+    localhost:6375> get foo
+    bar
+    localhost:6375> flushall
+    localhost:6375> get foo
+    localhost:6375> 
+
     ```
